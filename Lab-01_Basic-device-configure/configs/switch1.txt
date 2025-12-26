@@ -1,0 +1,15 @@
+enable
+
+configure terminal
+
+hostname SW1
+
+enable password <Password>
+
+service password-encryption
+
+exit
+
+show running-config
+
+write

@@ -1,0 +1,36 @@
+1. Cisco CLI Operating Modes
+
+Cisco devices use a hierarchical structure for their Command Line Interface (CLI). You must navigate through these modes in order to access specific functions:
+
+User EXEC Mode (Router>): The default mode upon login. It allows basic monitoring and limited "show" commands but does not permit configuration changes.
+
+Privileged EXEC Mode (Router#): Accessed by typing enable. This mode provides full access to device information.
+
+Global Configuration Mode (Router(config)#): Accessed by typing configure terminal. This is where actual changes (like hostnames or IP addresses) are made to the device.
+
+
+2. Device Identification and Security
+
+Securing your network devices is a critical first step in any deployment:
+
+Hostname: Assigning a unique hostname is essential for identifying the device within the network, especially when managing multiple routers and switches.
+
+Passwords: Setting console and enable passwords creates the first line of defense against unauthorized physical or remote access.
+
+Password Encryption: By default, some passwords appear in plain text. Enabling encryption ensures that sensitive credentials remain hidden if someone views the configuration file.
+
+
+3. Interface Activation and IP Addressing
+
+Unlike Switch interfaces, Cisco Router interfaces are disabled (administratively down) by default for security reasons.
+
+You must manually issue the no shutdown command to "turn on" the port and allow traffic to flow.
+
+IP Addressing: An IP address acts as a logical identity for a device on a network. In this lab, the Router acts as a "gateway," allowing data to travel between two different local networks (192.168.1.0/24 and 192.168.2.0/24).
+
+Note on Switches: In this basic lab, the switches (SW1 and SW2) function as plug-and-play devices (Layer 2) that simply connect multiple devices within the same network. We do not configure them here to focus purely on the routing and initial setup logic.
+
+
+4. Verification with Ping
+
+Ping is a fundamental diagnostic tool used to test reachability. It sends a small packet (ICMP Echo Request) to a destination IP Address. If the destination receives it, they'll sends a reply back(ICMP Echo Reply), it confirms that the physical cables, IP settings, and routing paths are all functioning correctly.

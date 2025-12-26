@@ -1,0 +1,32 @@
+no - It is a manual Setup Mode that asks step-by-step questions to configure the device, but engineers choose "no" to gain full control and efficiency by configuring the device manually through the CLI.
+
+enable - at User EXEC mode to navigate to Privilege EXEC mode
+
+configure terminal - at Privilege EXEC mode to navigate to Global Config mode
+
+hostname Router
+
+interface e0/0 - at Global Config mode to Interface Config mode
+
+ip address 192.168.1.1 255.255.255.0
+
+no shutdown
+
+exit - at Interface Config mode back to Global Config mode
+
+enable password <Password> - clearly, it use to setup a console password
+
+exit - at Global Config mode to User Privilege EXEC mode
+
+show running-config - show everything you've configured. In this command, you can see "enable password <your password>", totally unsafe if someone see right ?
+
+configure terminal - at Privilege EXEC mode to navigate to Global Config mode
+
+service password-encryption - encrypt your password
+
+exit - at Global Config mode to User Privilege EXEC mode
+
+show running-config - now you just can see the hashed password
+
+write | wr | copy running-config startup-config - to save your config
+
