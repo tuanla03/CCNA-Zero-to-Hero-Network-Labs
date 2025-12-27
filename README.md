@@ -15,6 +15,7 @@ The main objective of this repository is to improve my **documentation skills** 
 | ID | Lab Topic | Description | Status |
 | :---: | :--- | :--- | :---: |
 | 01 | [Basic device configure](./Lab-01_Basic-device-configure) | Navigating between common configuration modes, Configure Hostname, Password, IP Address and use Ping to test the connection. | ✅ Done |
+| 02 | [Static Route](./Lab-02-Static-route) | Static routing between different networks. | ⏳ In Progress |
 
 *Click on the Lab Topic to view details, topology, and configurations.*
 
